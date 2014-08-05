@@ -8,6 +8,7 @@ Download the application and edit <code>result.py</code> file in the 13th and 14
 
 ######Warning
 Use shorthand notation for Semester and Branch for example for 2nd Semester and Computer Information Technology branch , type
-`IT` and 'CSE` respectively
+`IT` and `CSE` respectively
 
+#######Currently the application is only compatible with Python 3.4+
 
