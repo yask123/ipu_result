@@ -1,7 +1,8 @@
 """This application has been written by Yask Srivastava! """
-
+import os
 from urllib.request import urlopen
 data =''
+link=''
 for line in urlopen('http://ggsipuresults.nic.in/ipu/results/resultsmain.htm'):
 	data = data+str(line)
 
@@ -20,6 +21,7 @@ while(run):
 			print ('Your result declared , Generating Link :')
 			end_search_pdf=data.find('"',start_search_pdf+9)
 			print ('http://ggsipuresults.nic.in/ipu/results/'+data[start_search_pdf:end_search_pdf])
+			link='http://ggsipuresults.nic.in/ipu/results/'+data[start_search_pdf:end_search_pdf]
 			break
 		else:
 			start=end_row+5
@@ -33,6 +35,8 @@ while(run):
 	except:
 		print ('Result Not yet Declared')
 		break	
-
+print('Starting Automatic Download , Please wait while Download finishes.')
+command='wget '+'http://ggsipuresults.nic.in/ipu/results/'+data[start_search_pdf:end_search_pdf]
+os.system(command)
 
 
