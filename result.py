@@ -3,6 +3,7 @@ import os
 from urllib.request import urlopen
 data =''
 link=''
+print ('Running on feature 1 ')
 for line in urlopen('http://ggsipuresults.nic.in/ipu/results/resultsmain.htm'):
 	data = data+str(line)
 
