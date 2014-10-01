@@ -10,7 +10,8 @@ run = True
 start=0
 while(run):
 	try :
-		start_Branch=data.find('ECE',start)
+		branch = input('What branch ?')
+		start_Branch=data.find(branch,start)
 
 		end_row=data.find('</td>',start_Branch)
 		start_search_pdf=data.find('<a href="',end_row)+9
